@@ -128,7 +128,6 @@ int		reach_position(t_informations *info)
 		}
 		actual_p[0] += 1;
 	}
-//	dprintf(2, "\e[92m ------le point a traiter now est : [%d] [%d] ------------------\n\e[0m", info->reach_the_position[0], info->reach_the_position[1]);
 	ft_putnbr(info->place_piece[0]);
 	ft_putchar(' ');
 	ft_putnbr(info->place_piece[1]);
@@ -207,8 +206,5 @@ int		place_piece(t_informations *info)
 		reach_position(info);
 		thing = 0;
 	}
-	///////// ALors la poulet tu peut rush toutes les coords que tu veux
-	///// A toi de trouver la meilleur strategie
-	/// UN big truc qui s adapte ou un truc bateau ????
 	return (0);
 }

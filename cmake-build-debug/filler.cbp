@@ -83,6 +83,9 @@
 		<Unit filename="/Users/steeven/42_projects/filler/filler.c">
 			<Option target="filler"/>
 		</Unit>
+		<Unit filename="/Users/steeven/42_projects/filler/filler.h">
+			<Option target="filler"/>
+		</Unit>
 		<Unit filename="/Users/steeven/42_projects/filler/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
