@@ -18,7 +18,7 @@ int		refresh_map(t_informations		*info)
 		ft_putstr_fd("Error with get_next_line", 2);
 		return (-1);
 	}
-	dprintf(2, "\e[34m line[%s]\n\e[0m", line);
+//	dprintf(2, "\e[34m line[%s]\n\e[0m", line);
 	if (ft_strncmp(line, "    0", 5))
 	{
 		ft_putstr_fd("Error with VM input", 2);
@@ -33,7 +33,7 @@ int		refresh_map(t_informations		*info)
 			ft_putstr_fd("Error with get_next_line", 2);
 			return (-1);
 		}
-		dprintf(2, "\e[34m line[%d] = [%s]\n\e[0m", i % 10, line);
+//		dprintf(2, "\e[34m line[%d] = [%s]\n\e[0m", i % 10, line);
 //		info->map[i] = ft_strsub(line, 4, (size_t)info->map_widht);
 		ft_strcpy(info->map[i], line + 4);
 		ft_strdel(&line);
@@ -79,8 +79,8 @@ int		main()
 
 	if (init_info(&info) == -1)
 		return (0);
-	dprintf(2, "\e[33m im the [%c]\n\e[0m", info.me);
-	dprintf(2, "\e[33m map_max = [%d][%d]\n\e[0m", info.map_widht, info.map_height);
+//	dprintf(2, "\e[33m im the [%c]\n\e[0m", info.me);
+//	dprintf(2, "\e[33m map_max = [%d][%d]\n\e[0m", info.map_widht, info.map_height);
 	if (!(info.map = ft_memalloc(sizeof(char *) * info.map_height)))
 		return (0);
 	index = -1;
@@ -94,8 +94,8 @@ int		main()
 		index = -1;
 		if (refresh_map(&info) == -1)
 			return (0);
-		while (++index < info.map_height)
-			dprintf(2, "\e[33mmap[%d] = [%s]\n\e[0m",index % 10, info.map[index]);
+//		while (++index < info.map_height)
+//			dprintf(2, "\e[33mmap[%d] = [%s]\n\e[0m",index % 10, info.map[index]);
 		get_piece(&info);
 		place_piece(&info);
 		if (get_next_line(0, &line) == -1)
@@ -107,5 +107,7 @@ int		main()
 		//place piece avec algo demain fini ?? (lol)(.....) =)
 		//(+ visu ??) apres demain inchalla ??
 	}
+
+	// YA des malloc (beeing freed blabla) a revoir et des putain de vm input a revoir aussi
 	return (0);
 }

@@ -10,12 +10,13 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	filler.smortier
+NAME		=	smortier.filler
 
 SRC_NAME	=	filler.c \
 				get_next_line.c \
 				get_piece.c \
 				place_piece.c \
+				artif_intel.c \
 
 OBJ_NAME	=	$(SRC:.c=.o)
 SRC_PATH	=	.

@@ -23,6 +23,7 @@ typedef struct		s_informations
 	int		p_height;
 	char	**piece;
 	int		first_pos[2];
+	int		his_first_pos[2];
 	int		reach_the_position[2];
 	int		place_piece[2];
 	int		pos_reached;
@@ -31,6 +32,8 @@ typedef struct		s_informations
 }					t_informations;
 
 int					get_piece(t_informations *info);
+
+void				artif_intel(t_informations *info);
 
 int					place_piece(t_informations *info);
 
