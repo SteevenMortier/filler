@@ -12,33 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdc22e39-f5f1-47d6-b7a2-769e8d614307" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/artif_intel.c" afterPath="$PROJECT_DIR$/artif_intel.c" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CMakeCCompiler.cmake" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CMakeCXXCompiler.cmake" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CMakeDetermineCompilerABI_C.bin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CMakeDetermineCompilerABI_CXX.bin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CMakeSystem.cmake" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/a.out" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/a.out" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/filler.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/filler.dir/DependInfo.cmake" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/filler.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/filler.dir/build.make" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/filler.dir/flags.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/filler.dir/flags.make" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/filler.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/filler.dir/link.txt" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/filler.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/filler.cbp" />
-      <change beforePath="$PROJECT_DIR$/filler.c" afterPath="$PROJECT_DIR$/filler.c" />
-      <change beforePath="$PROJECT_DIR$/get_piece.c" afterPath="$PROJECT_DIR$/get_piece.c" />
+      <change beforePath="$PROJECT_DIR$/filler.trace" afterPath="$PROJECT_DIR$/filler.trace" />
       <change beforePath="$PROJECT_DIR$/resources/filler.trace" afterPath="$PROJECT_DIR$/resources/filler.trace" />
       <change beforePath="$PROJECT_DIR$/resources/players/smortier.filler" afterPath="$PROJECT_DIR$/resources/players/smortier.filler" />
     </list>
@@ -56,18 +31,18 @@
       <file leaf-file-name="filler.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/filler.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="64" column="40" lean-forward="false" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
+            <state relative-caret-position="450">
+              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="place_piece.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="place_piece.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/place_piece.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="164" column="13" lean-forward="true" selection-start-line="164" selection-start-column="13" selection-end-line="164" selection-end-column="13" />
+            <state relative-caret-position="543">
+              <caret line="186" column="59" lean-forward="false" selection-start-line="186" selection-start-column="59" selection-end-line="186" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -133,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="artif_intel.c" pinned="false" current-in-tab="false">
+      <file leaf-file-name="artif_intel.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/artif_intel.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="165">
+              <caret line="11" column="132" lean-forward="false" selection-start-line="11" selection-start-column="132" selection-end-line="11" selection-end-column="132" />
               <folding />
             </state>
           </provider>
@@ -189,8 +164,8 @@
         <option value="$PROJECT_DIR$/filler.h" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/filler.c" />
-        <option value="$PROJECT_DIR$/artif_intel.c" />
         <option value="$PROJECT_DIR$/place_piece.c" />
+        <option value="$PROJECT_DIR$/artif_intel.c" />
       </list>
     </option>
   </component>
@@ -282,12 +257,12 @@
       <workItem from="1520436918283" duration="153000" />
       <workItem from="1520531038726" duration="361000" />
       <workItem from="1520688261329" duration="6575000" />
-      <workItem from="1520772112800" duration="1284000" />
+      <workItem from="1520772112800" duration="2374000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49414000" />
+    <option name="totallyTimeSpent" value="50504000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="800" height="1440" extended-state="0" />
@@ -694,26 +669,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/artif_intel.c">
+    <entry file="file://$PROJECT_DIR$/place_piece.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="543">
+          <caret line="186" column="59" lean-forward="false" selection-start-line="186" selection-start-column="59" selection-end-line="186" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/filler.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="64" column="40" lean-forward="false" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
+        <state relative-caret-position="450">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/place_piece.c">
+    <entry file="file://$PROJECT_DIR$/artif_intel.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="164" column="13" lean-forward="true" selection-start-line="164" selection-start-column="13" selection-end-line="164" selection-end-column="13" />
+        <state relative-caret-position="165">
+          <caret line="11" column="132" lean-forward="false" selection-start-line="11" selection-start-column="132" selection-end-line="11" selection-end-column="132" />
           <folding />
         </state>
       </provider>
