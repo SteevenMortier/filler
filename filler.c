@@ -21,7 +21,7 @@ int		refresh_map(t_informations		*info)
 //	dprintf(2, "\e[34m line[%s]\n\e[0m", line);
 	if (ft_strncmp(line, "    0", 5))
 	{
-		ft_putstr_fd("Error with VM input", 2);
+		//ft_putstr_fd("Error with VM input", 2);
 		return (-1);
 	}
 	ft_strdel(&line);
@@ -96,7 +96,8 @@ int		main()
 			return (0);
 //		while (++index < info.map_height)
 //			dprintf(2, "\e[33mmap[%d] = [%s]\n\e[0m",index % 10, info.map[index]);
-		get_piece(&info);
+		if (get_piece(&info) == -1)
+			return (0);
 		place_piece(&info);
 		if (get_next_line(0, &line) == -1)
 		{

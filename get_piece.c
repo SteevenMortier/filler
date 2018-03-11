@@ -43,7 +43,7 @@ int		get_piece(t_informations *info)
 //	dprintf(2, "\e[31m line[%s]\n\e[0m", line);
 	if (!ft_strstr(line, "Piece "))
 	{
-		ft_putstr_fd("Error with VM input", 2);
+		//ft_putstr_fd("Error with VM input", 2);
 		return (1);
 	}
 	info->p_height = ft_atoi(line + 6);

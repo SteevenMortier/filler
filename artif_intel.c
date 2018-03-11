@@ -7,7 +7,7 @@ void	artif_intel(t_informations *info)
 //		reach_position(info);
 	/*else */ if (info->p_height > 1)
 	{
-		info->target[0] = info->his_first_pos[0] - 5;
+		info->target[0] = info->his_first_pos[0] - 3;
 		info->target[1] = info->his_first_pos[1];
 		swap = 0;
 		reach_position(info);
@@ -20,9 +20,10 @@ void	artif_intel(t_informations *info)
 	}*/
 	else
 	{
-		info->target[0] = info->his_first_pos[0] + 5;
+		info->target[0] = info->his_first_pos[0] + 3;
 		info->target[1] = info->his_first_pos[1];
 		swap = 1;
 		reach_position(info);
 	}
+	//jvais try de faire un truc qui preshot sa target et l'intercepter =}
 }
