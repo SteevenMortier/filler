@@ -40,12 +40,8 @@ int		get_piece(t_informations *info)
 		ft_putstr_fd("Error with get_next_line", 2);
 		return (-1);
 	}
-//	dprintf(2, "\e[31m line[%s]\n\e[0m", line);
 	if (!ft_strstr(line, "Piece "))
-	{
-		//ft_putstr_fd("Error with VM input", 2);
 		return (1);
-	}
 	info->p_height = ft_atoi(line + 6);
 	index = 6;
 	while (ft_isdigit(line[index]))

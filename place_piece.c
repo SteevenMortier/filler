@@ -70,7 +70,7 @@ void	get_diff_for_position(t_informations *info,int x ,int y)// repere jjuste le
 					info->diff_for_position = difference;
 					info->place_piece[0] = x;
 					info->place_piece[1] = y;
-					if (difference < 2)
+					if (difference < 4)
 						info->pos_reached = 1;
 				}
 			}

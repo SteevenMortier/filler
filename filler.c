@@ -71,6 +71,17 @@ int		init_info(t_informations	*info)
 	return (42);
 }
 
+void	leaks_holder(t_informations *info)
+{
+	int		index;
+
+	index = -1;
+	while (++index < info->map_height)
+		ft_memdel((void **)&(info->map[index]));
+	ft_memdel((void **)&(info->map));
+//	ft_memdel((void **)&(info));
+}
+
 int		main()
 {
 	t_informations	info;
@@ -79,8 +90,6 @@ int		main()
 
 	if (init_info(&info) == -1)
 		return (0);
-//	dprintf(2, "\e[33m im the [%c]\n\e[0m", info.me);
-//	dprintf(2, "\e[33m map_max = [%d][%d]\n\e[0m", info.map_widht, info.map_height);
 	if (!(info.map = ft_memalloc(sizeof(char *) * info.map_height)))
 		return (0);
 	index = -1;
@@ -88,14 +97,11 @@ int		main()
 		if (!(info.map[index] = ft_strnew((size_t)info.map_widht)))
 			return (0);
 	info.pos_reached = 0;
-	////// CA COMMENCE A BOUCLER ICI
 	while (42)
 	{
 		index = -1;
 		if (refresh_map(&info) == -1)
 			return (0);
-//		while (++index < info.map_height)
-//			dprintf(2, "\e[33mmap[%d] = [%s]\n\e[0m",index % 10, info.map[index]);
 		if (get_piece(&info) == -1)
 			return (0);
 		place_piece(&info);
@@ -104,11 +110,21 @@ int		main()
 			ft_putstr_fd("Error with get_next_line", 2);
 			return (-1);
 		}
+//		dprintf(2, "\e[32m Line = [%s]\n\e[0m", line);
+		if (!line)
+		{
+//			dprintf(2, "\e[32m We are in\n\e[0m");
+			leaks_holder(&info);
+//			sleep(10);
+			exit(1);
+		}
+		if (info.piece)
+		{
+			index = -1;
+			while (++index < info.p_height)
+				ft_memdel((void **)&(info.piece[index]));
+			ft_memdel((void **)&(info.piece));
+		}
 		ft_strdel(&line);
-		//place piece avec algo demain fini ?? (lol)(.....) =)
-		//(+ visu ??) apres demain inchalla ??
 	}
-
-	// YA des malloc (beeing freed blabla) a revoir et des putain de vm input a revoir aussi
-	return (0);
 }
