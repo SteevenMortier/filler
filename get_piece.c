@@ -25,7 +25,7 @@ int		create_piece(t_informations *info)
 			return (-1);
 		}
 		ft_strcpy(info->piece[index], line);
-		ft_strdel(&line);
+//		ft_strdel(&line);
 	}
 	return (42);
 }
@@ -48,7 +48,7 @@ int		get_piece(t_informations *info)
 		index++;
 	info->p_widht = ft_atoi(line + index);
 //	dprintf(2, "\e[32m taille de la piece x = [%d] y = [%d]\n\e[0m", info->p_widht, info->p_height);
-	ft_strdel(&line);
+//	ft_strdel(&line);
 	if (create_piece(info) == -1)
 		return (-1);
 	return (42);

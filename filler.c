@@ -24,7 +24,7 @@ int		refresh_map(t_informations		*info)
 		//ft_putstr_fd("Error with VM input", 2);
 		return (-1);
 	}
-	ft_strdel(&line);
+//	ft_strdel(&line);
 	i = -1;
 	while (++i < info->map_height)
 	{
@@ -36,7 +36,7 @@ int		refresh_map(t_informations		*info)
 //		dprintf(2, "\e[34m line[%d] = [%s]\n\e[0m", i % 10, line);
 //		info->map[i] = ft_strsub(line, 4, (size_t)info->map_widht);
 		ft_strcpy(info->map[i], line + 4);
-		ft_strdel(&line);
+//		ft_strdel(&line);
 	}
 	return (42);
 }
@@ -54,7 +54,7 @@ int		init_info(t_informations	*info)
 	identifier = (int)(line[10]) - 48;
 	info->me = (identifier == 1) ? 'o' : 'x';
 	info->him = (identifier == 1) ? 'x' : 'o';
-	ft_strdel(&line);
+//	ft_strdel(&line);
 	if (get_next_line(0, &line) == -1)
 	{
 		ft_putstr_fd("Error with get_next_line", 2);
@@ -67,7 +67,10 @@ int		init_info(t_informations	*info)
 	info->map_widht = ft_atoi(line + identifier);
 	info->target[0] = info->map_height / 2;
 	info->target[1] = info->map_widht / 2;
-	ft_strdel(&line);
+	info->his_last_pos[0] = 0;
+	info->his_last_pos[1] = 0;
+	info->old_map = NULL;
+//	ft_strdel(&line);
 	return (42);
 }
 
@@ -125,6 +128,6 @@ int		main()
 				ft_memdel((void **)&(info.piece[index]));
 			ft_memdel((void **)&(info.piece));
 		}
-		ft_strdel(&line);
+//		ft_strdel(&line);
 	}
 }

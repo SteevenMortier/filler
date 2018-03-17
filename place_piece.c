@@ -184,7 +184,6 @@ int		get_first_pos(t_informations *info)
 	}
 
 	index_bis = -1;
-//	dprintf(2, "\e[32m map[%d] = [%s]\n\e[0m", index, info->map[index]);
 	while (info->map[index][++index_bis])
 	{
 		if (info->map[index][index_bis] == (info->me - 32))
@@ -192,7 +191,6 @@ int		get_first_pos(t_informations *info)
 		if (info->map[index][index_bis] == (info->him - 32))
 			info->his_first_pos[1] = index_bis;
 	}
-//	dprintf(2, "\e[32m his pos [%d][%d]\n\e[0m", info->his_first_pos[0], info->his_first_pos[1]);
 	info->reach_the_position[0] = info->first_pos[0];
 	info->reach_the_position[1] = info->first_pos[1];
 	return (42);
@@ -203,32 +201,22 @@ int		place_piece(t_informations *info)
 	int			index_piece;
 	int			index;
 	static int	first;
+	int			index_old_map;
 
 	index_piece = -1;
-//	while (++index_piece < info->p_height)
-//		dprintf(2, "\e[35m piece[%d] = [%s]\n\e[0m", index_piece, info->piece[index_piece]);
 	if (!first)
 	{
 		get_first_pos(info);
 		first = 42;
 	}
 	artif_intel(info);
-	/*
-	 *	pour placer la piece en fonction de la position que l'on veut reached
-	 *	il suffit de changer les valeurs de target et de faire boucler
-	 *	le placement de la piece autour de celui ci;
-	 *	exemple : on veut reach 10 ,10
-	 *
-	 *		-> info->target[0] = 10; \
-			-> info->target[1] = 10;  - on boucle sur ca jusqua ce que diff < 2.
-			-> reach_position(info); /
-
-	 	On eput desormais crer une fonction IA qui n'auras qu'a changer target
-	 	en fonction des la position ou on veut aller.
-	 	(par exemple IA :
-	 	 scan la map et en fonction de ou ce trouve ladversaire, on adapte
-	 	 notre target)
-	 */
-
+	index_old_map = -1;
+	if (!(info->old_map = ft_memalloc(sizeof(char *) * info->map_height)))
+		return (-1);
+	while (++index_old_map < info->map_height)
+	{
+		info->old_map[index_old_map] = ft_strdup(info->map[index_old_map]);
+	}
+	//je creer la la old map;
 	return (0);
 }

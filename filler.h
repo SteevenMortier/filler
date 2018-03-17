@@ -21,11 +21,13 @@ typedef struct		s_informations
 	int		map_widht;
 	int		map_height;
 	char	**map;
+	char	**old_map;
 	int		p_widht;
 	int		p_height;
 	char	**piece;
 	int		first_pos[2];
 	int		his_first_pos[2];
+	int		his_last_pos[2];
 	int		reach_the_position[2];
 	int		place_piece[2];
 	int		pos_reached;
@@ -38,5 +40,7 @@ int					get_piece(t_informations *info);
 void				artif_intel(t_informations *info);
 
 int					place_piece(t_informations *info);
+
+int					reach_position(t_informations *info);
 
 #endif
