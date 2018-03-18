@@ -17,6 +17,8 @@ SRC_NAME	=	filler.c \
 				get_piece.c \
 				place_piece.c \
 				artif_intel.c \
+				reach_position.c \
+				check_piece_pos.c \
 
 OBJ_NAME	=	$(SRC:.c=.o)
 SRC_PATH	=	.

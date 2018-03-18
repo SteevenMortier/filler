@@ -1,11 +1,14 @@
-///HEADER
-///HEADER
-///HEADER
-///HEADER
-///HEADER
-///HEADER
-///HEADER
-///HEADER
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_piece.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: smortier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/03/18 09:45:03 by smortier          #+#    #+#             */
+/*   Updated: 2018/03/18 09:45:10 by smortier         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "filler.h"
 
@@ -25,7 +28,7 @@ int		create_piece(t_informations *info)
 			return (-1);
 		}
 		ft_strcpy(info->piece[index], line);
-//		ft_strdel(&line);
+		ft_strdel(&line);
 	}
 	return (42);
 }
@@ -47,9 +50,8 @@ int		get_piece(t_informations *info)
 	while (ft_isdigit(line[index]))
 		index++;
 	info->p_widht = ft_atoi(line + index);
-//	dprintf(2, "\e[32m taille de la piece x = [%d] y = [%d]\n\e[0m", info->p_widht, info->p_height);
-//	ft_strdel(&line);
 	if (create_piece(info) == -1)
 		return (-1);
+	ft_strdel(&line);
 	return (42);
 }
