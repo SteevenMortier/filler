@@ -14,7 +14,7 @@
 
 # define GET_NEXT_LINE_H
 
-# include "libft/libft.h"
+# include "../libft/libft.h"
 
 # include <sys/types.h>
 # include <sys/stat.h>

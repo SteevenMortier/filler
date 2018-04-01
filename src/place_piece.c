@@ -70,6 +70,7 @@ int		get_first_pos(t_informations *info)
 	int		index_bis;
 
 	index = -1;
+	index_me = 0;
 	while (++index < info->map_height - 1)
 	{
 		if (ft_strchr(info->map[index], info->me - 32))
@@ -93,7 +94,6 @@ int		get_first_pos(t_informations *info)
 int		place_piece(t_informations *info)
 {
 	int			index_piece;
-	int			index;
 	static int	first;
 	int			index_old_map;
 

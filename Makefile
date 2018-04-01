@@ -21,14 +21,14 @@ SRC_NAME	=	filler.c \
 				check_piece_pos.c \
 
 OBJ_NAME	=	$(SRC:.c=.o)
-SRC_PATH	=	.
+SRC_PATH	=	./src
 OBJ_PATH	=	.
 SRC			=	$(addprefix $(SRC_PATH)/,$(SRC_NAME))
 OBJ			=	$(addprefix $(OBJ_PATH)/,$(OBJ_NAME))
 
 CC			=	clang
 CFLAGS		=	-Wall -Werror -Wextra
-CPPFLAGS	=	-I.
+CPPFLAGS	=	-I./incs
 
 LDLIBS		=	-lft
 LDFLAGS		=	-Llibft

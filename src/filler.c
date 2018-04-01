@@ -87,7 +87,6 @@ void	leaks_holder(t_informations *info)
 int		main(void)
 {
 	t_informations	info;
-	int				index;
 	char			*line;
 
 	if (init_info(&info) == -1)
