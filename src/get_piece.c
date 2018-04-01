@@ -14,22 +14,37 @@
 
 int		create_piece(t_informations *info)
 {
-	int		index;
-	char	*line;
+	int			index;
+	char		*line;
+	int			index_p;
+	int			first;
 
-	info->piece = ft_memalloc(sizeof(char *) * info->map_height);
+	info->p_lag_x = 0;
+	first = 0;
+	info->piece = ft_memalloc(sizeof(char *) * info->p_height);
 	index = -1;
+	index_p = 0;
 	while (++index < info->p_height)
 	{
-		info->piece[index] = ft_strnew(info->p_widht);
 		if (get_next_line(0, &line) == -1)
 		{
 			ft_putstr_fd("Error with get_next_line", 2);
 			return (-1);
 		}
-		ft_strcpy(info->piece[index], line);
+		if (ft_strchr(line, '*'))
+		{
+			if (!info->p_lag_x && !first)
+			{
+				first = 42;
+				info->p_lag_x = index;
+			}
+			info->piece[index_p] = ft_strnew(info->p_widht);
+			ft_strcpy(info->piece[index_p], line);
+			index_p++;
+		}
 		ft_strdel(&line);
 	}
+	info->p_height = index_p;
 	return (42);
 }
 

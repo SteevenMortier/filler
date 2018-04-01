@@ -26,10 +26,11 @@ void	spot_his_last_pos(t_informations *info)
 {
 	int				index_x;
 	int				index_y;
+	static int		start;
 
 	index_x = -1;
-	info->his_last_pos[0] = 0;
-	info->his_last_pos[1] = 0;
+//	info->his_last_pos[0] = 0;
+//	info->his_last_pos[1] = 0;
 	if (info->old_map)
 	{
 		index_x = -1;
@@ -43,12 +44,18 @@ void	spot_his_last_pos(t_informations *info)
 				{
 					info->his_last_pos[0] = index_x;
 					info->his_last_pos[1] = index_y;
+					dprintf(2, "HIS LAST POS = [%d][%d]\n", info->his_last_pos[0], info->his_last_pos[1]);
 					return ;
 				}
 			}
 		}
 	}
-	dprintf(2, "last_pos = [%d][%d]\n", info->his_last_pos[0], info->his_last_pos[1]);
+	if (start)
+	{
+		info->his_last_pos[0] = -42;
+		info->his_last_pos[1] = -42;
+	}
+	start = 1;
 }
 
 void	artif_intel(t_informations *info)

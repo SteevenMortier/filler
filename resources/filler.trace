@@ -1,7 +1,5 @@
-seed = 5465
-X: error on input
-players/smortier.filler: Segfault at 0
+seed = 7855
 O: error on input
 players/superjeannot.filler won
 Score:
-108AGAINST0
+20AGAINST1

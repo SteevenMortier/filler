@@ -15,7 +15,7 @@
 int		return_case(t_informations *info, int x, int y,
 					int index_p[2])
 {
-	if (x < 0 || x > info->map_height - 1 || y < 0 ||
+	if (x <= 0 || x > info->map_height - 1 || y <= 0 ||
 		y > info->map_widht - 1)
 		return (0);
 	if ((info->piece[index_p[0]][index_p[1]] == '*'
@@ -32,6 +32,7 @@ int		check_piece_pos(t_informations *info, int x, int y)
 	int		save_y;
 
 	save_y = y;
+	x = x + info->p_lag_x;
 	link = 0;
 	index_p[0] = -1;
 	while (++index_p[0] < info->p_height)
@@ -51,5 +52,7 @@ int		check_piece_pos(t_informations *info, int x, int y)
 	}
 	if (link != 1)
 		return (0);
+	dprintf(2, "\e[38;5;154m Lag = [%d] \e[0m\n", info->p_lag_x);
+	dprintf(2, "\e[31m Check on = [%d][%d] \e[0m\n", x - info->p_lag_x, y);
 	return (1);
 }

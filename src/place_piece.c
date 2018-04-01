@@ -50,10 +50,10 @@ void	all_try_for_piece(t_informations *info, int x, int y)
 	actual_p[0] = x;
 	actual_p[1] = y;
 	try_p_x = (info->p_height - 1) * (-1);
-	while (try_p_x <= info->p_height - 1)
+	while (try_p_x <= info->p_height)
 	{
 		try_p_y = (info->p_widht - 1) * (-1);
-		while (try_p_y <= info->p_widht - 1)
+		while (try_p_y <= info->p_widht)
 		{
 			get_diff_for_position(info, actual_p[0] + try_p_x,
 								actual_p[1] + try_p_y);
