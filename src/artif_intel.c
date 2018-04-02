@@ -44,7 +44,7 @@ void	spot_his_last_pos(t_informations *info)
 				{
 					info->his_last_pos[0] = index_x;
 					info->his_last_pos[1] = index_y;
-					dprintf(2, "HIS LAST POS = [%d][%d]\n", info->his_last_pos[0], info->his_last_pos[1]);
+//					dprintf(2, "HIS LAST POS = [%d][%d]\n", info->his_last_pos[0], info->his_last_pos[1]);
 					return ;
 				}
 			}

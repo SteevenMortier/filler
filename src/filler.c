@@ -84,6 +84,23 @@ void	leaks_holder(t_informations *info)
 	}
 }
 
+void	logger(t_informations *info)
+{
+	(void)info;
+	int		fd = open("/tmp/logger", O_RDWR | O_CREAT | O_TRUNC, 0644);
+
+	if (fd > 0) {
+		int 	index = 0;
+		while (index < info->map_height)
+		{
+			ft_putendl_fd(info->map[index], fd);
+			index++;
+		}
+		ft_putendl_fd("", fd);
+	}
+	close(fd);
+}
+
 int		main(void)
 {
 	t_informations	info;
@@ -96,6 +113,7 @@ int		main(void)
 	{
 		if (refresh_map(&info) == -1)
 			return (0);
+		logger(&info);
 		if (get_piece(&info) == -1)
 			return (0);
 		place_piece(&info);
