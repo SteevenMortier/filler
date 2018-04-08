@@ -52,7 +52,5 @@ int		check_piece_pos(t_informations *info, int x, int y)
 	}
 	if (link != 1)
 		return (0);
-//	dprintf(2, "\e[38;5;154m Lag = [%d] \e[0m\n", info->p_lag_x);
-//	dprintf(2, "\e[31m Check on = [%d][%d] \e[0m\n", x - info->p_lag_x, y);
 	return (1);
 }

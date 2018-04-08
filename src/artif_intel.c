@@ -61,9 +61,14 @@ void	spot_his_last_pos(t_informations *info)
 void	artif_intel(t_informations *info)
 {
 	spot_his_last_pos(info);
-	info->target[0] = info->his_last_pos[0] - 3;
-	info->target[1] = (info->his_last_pos[1] >= info->map_widht / 2) ?
-					info->his_last_pos[1] + 2 : info->his_last_pos[1] - 2;
+	if (info->his_last_pos[0] >= info->map_height / 2)
+		info->target[0] = info->his_last_pos[0] - 3;
+	else
+		info->target[0] = info->his_last_pos[0] - 2;
+	if (info->his_last_pos[1] >= info->map_widht / 2)
+		info->target[1] = info->his_last_pos[1] - 2;
+	else
+		info->target[1] = info->his_last_pos[1] + 2;
 	reach_position(info);
 	if (info->old_map)
 		clear_old_map(info);

@@ -54,7 +54,7 @@ function	get_color(player)
 	if (player == 'x') then return 255, 100, 0 end
 	if (player == 'O') then return 0, 0, 255 end
 	if (player == 'o') then return 0, 100, 255
-	else return 255, 255, 255 end
+	else return 50, 75, 50 end
 end
 
 function	get_winner(line)
@@ -73,7 +73,7 @@ function	get_winner(line)
 end
 
 function leave()
-	love.timer.sleep(10)
+	love.timer.sleep(6)
 	love.event.quit()
 	os.exit()
 end
@@ -90,6 +90,7 @@ function	love.load()
 	size_map = {}
 	middle = {}
 	size_cube = {}
+	taille_x_fntr = love.graphics.getWidth()
 	lag_y =  (love.graphics.getHeight() - 650) / 3
 	file = io.read("*line")
 	players = get_player(file)
@@ -101,6 +102,7 @@ function	love.load()
 end
 
 function	love.update()
+	love.timer.sleep(0.02)
 	if (fin == 1) then 
 		leave()
 	end
@@ -146,6 +148,12 @@ function	love.draw()
 		love.graphics.print("\t\t\t VS ", middle[1], middle[2] + 100)
 		love.graphics.setColor(255, 0, 255)
 		love.graphics.print("\t\t\t\t\t" .. score[2], middle[1], middle[2] + 100)
+	end
+	if (fin ~= 1) then
+		love.graphics.setColor(0,0,255)
+		love.graphics.print(players[1], 10, middle[2])
+		love.graphics.setColor(255, 0, 0)
+		love.graphics.print(players[2], taille_x_fntr - (string.len(players[2]) * 20), middle[2])
 	end
 	for index=0,size_map[1] - 1 do
 		if (fin == 1) then break end
