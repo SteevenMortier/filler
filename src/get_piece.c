@@ -48,6 +48,36 @@ int		create_piece(t_informations *info)
 	return (42);
 }
 
+void	get_lag_y(t_informations *info)
+{
+	int		index_x;
+	int		index_y;
+	char	*str;
+
+	info->p_lag_y = 42;
+	index_x = -1;
+	str = NULL;
+	while (++index_x < info->p_height)
+	{
+		index_y = -1;
+		while (info->piece[index_x][++index_y])
+		{
+			if (info->piece[index_x][index_y] == '*' && index_y <=
+					info->p_lag_y)
+				info->p_lag_y = index_y;
+		}
+	}
+	info->p_lag_y = (info->p_lag_y == 42) ? 0 : info->p_lag_y;
+	index_x = -1;
+	while (++index_x < info->p_height && info->p_lag_y)
+	{
+		str = ft_strdup(info->piece[index_x]);
+		ft_memdel((void **)&(info->piece[index_x]));
+		info->piece[index_x] = ft_strdup(str + info->p_lag_y);
+		ft_memdel((void **)&(str));
+	}
+}
+
 int		get_piece(t_informations *info)
 {
 	char	*line;
@@ -67,6 +97,7 @@ int		get_piece(t_informations *info)
 	info->p_widht = ft_atoi(line + index);
 	if (create_piece(info) == -1)
 		return (-1);
+	get_lag_y(info);
 	ft_strdel(&line);
 	return (42);
 }

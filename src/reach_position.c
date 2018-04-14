@@ -17,11 +17,11 @@ int		just_fill(t_informations *info)
 	int		index_x;
 	int		index_y;
 
-	index_x = -1;
-	while (info->map[++index_x])
+	index_x = -1 * info->p_lag_x - 1;
+	while (++index_x < info->map_height)
 	{
-		index_y = -1;
-		while (info->map[++index_y])
+		index_y = -1 * info->p_lag_y - 1;
+		while (++index_y < info->map_widht)
 		{
 			if (check_piece_pos(info, index_x, index_y))
 			{

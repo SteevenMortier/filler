@@ -38,6 +38,7 @@ typedef struct		s_informations
 	int		p_height;
 	char	**piece;
 	int		p_lag_x;
+	int		p_lag_y;
 	int		first_pos[2];
 	int		his_first_pos[2];
 	int		his_last_pos[2];
